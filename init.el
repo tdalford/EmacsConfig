@@ -16,11 +16,11 @@
    (quote
     (elpy-module-company elpy-module-eldoc elpy-module-flymake
  elpy-module-pyvenv elpy-module-yasnippet elpy-module-django
- elpy-module-sane-defaults)))
- '(inhibit-startup-screen t)
+ elpy-module-sane-defaults))) '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (monokai-light-theme spacemacs-theme fill-column-indicator
+    (delight-powerline delight diminish smooth-scrolling
+ monokai-light-theme spacemacs-theme fill-column-indicator
  counsel-projectile treemacs-evil treemacs-projectile evil-magit
  projectile magit Magit powerline-evil monokai-theme
  column-marker py-autopep8 exec-path-from-shell conda yasnippet
@@ -163,6 +163,8 @@
     (define-key read-expression-map (kbd "C-r") 'counsel-expression-history)
     ;; make it so that the search wraps
     (setq ivy-wrap t)
+    ;; add counsel-yank-pop
+    (global-set-key (kbd "M-y") 'counsel-yank-pop)
     ))
 
 ;; avy
@@ -238,8 +240,6 @@
 
 	    (setq c-default-style "linux"
 		  c-basic-offset 4)
-            (setq smart-dash-mode t)
-
             )))
 
 ;; (global-whitespace-mode +1)
@@ -366,9 +366,7 @@
   )
 (add-hook 'python-mode-hook
           'py-autopep8-enable-on-save
-          (setq smart-dash-mode t)
           )
-;; (add-hook 'python-mode-hook (setq smart-dash-mode t))
 
 ;; add c-e and c-a to evil mode-- maybe c-n and c-p too?
 (define-key evil-normal-state-map (kbd "C-e") 'move-end-of-line)
@@ -381,10 +379,37 @@
 ;; redefine c-v to scroll line by line
 (define-key evil-normal-state-map (kbd "C-v") 'evil-scroll-line-down)
 
+;; (use-package powerline
+;;   :ensure t
+;;   :config
+;;  (powerline-center-evil-theme)
+;;   )
+
 (use-package powerline-evil
   :ensure t
   :config
+  (powerline-evil-center-color-theme)
+  (set-face-attribute 'mode-line nil
+		      :foreground "Black"
+		      :background "Green"
+		      :box nil)
   )
+;; use diminish to take these stupid minor modes away from powerline
+(use-package delight
+  :ensure t
+  :config
+  )
+(require 'delight-powerline)
+(delight 'projectile-mode nil t)
+(delight 'undo-tree-mode nil t)
+(delight 'ivy-mode nil t)
+(delight 'linum-relative-mode nil t)
+(delight 'auto-complete-mode nil t)
+(delight 'which-key-mode nil t)
+(delight 'auto-revert-mode nil t)
+(delight 'beacon-mode nil t)
+(delight 'abbrev-mode nil t)
+
 ;; try making C-x C-b actually move cursor to the buffer list
 ;; (global-set-key (kbd "C-x C-b") 'my-list-buffers)
 (defun my-list-buffers (&optional files-only)
@@ -426,7 +451,9 @@ For more information, see the function `buffer-menu'."
   :ensure t
   :config
   (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
-  (projectile-mode +1))
+  (projectile-mode +1)
+  :delight '(:eval (concat " " (projectile-project-name)))
+  )
 
 ; use counsel-projectile as well
 (use-package counsel-projectile
@@ -552,4 +579,12 @@ For more information, see the function `buffer-menu'."
                         cua-scroll-up))
           (ding))))
 
+;; yeah I wasn't actually getting this to work properly
 (require 'smart-dash)
+
+;; add smooth scrolling in here
+(use-package smooth-scrolling
+  :ensure t
+  :config
+  (smooth-scrolling-mode 1)
+  )
