@@ -5,30 +5,14 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
-    ("fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088"
-     "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0"
-     "bd7b7c5df1174796deefce5debc2d976b264585d51852c962362be83932873d9"
-     "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879"
-     "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4"
-     "e11569fd7e31321a33358ee4b232c2d3cf05caccd90f896e1df6cab228191109"
-     default)))
+    ("b35a14c7d94c1f411890d45edfb9dc1bd61c5becd5c326790b51df6ebf60f402" "fd2cf9ad9895d93138dd67215702280e0db56e796ee62dea92043eed4b23177c" "d1b4990bd599f5e2186c3f75769a2c5334063e9e541e37514942c27975700370" "1c082c9b84449e54af757bcae23617d11f563fc9f33a832a8a2813c4d7dfb652" "4697a2d4afca3f5ed4fdf5f715e36a6cac5c6154e105f3596b44a4874ae52c45" "151bde695af0b0e69c3846500f58d9a0ca8cb2d447da68d7fbf4154dcf818ebc" "6b289bab28a7e511f9c54496be647dc60f5bd8f9917c9495978762b99d8c96a0" "b4c13d25b1f9f66eb769e05889ee000f89d64b089f96851b6da643cee4fdab08" "fe666e5ac37c2dfcf80074e88b9252c71a22b6f5d2f566df9a7aa4f9bea55ef8" "3a3de615f80a0e8706208f0a71bbcc7cc3816988f971b6d237223b6731f91605" "f0dc4ddca147f3c7b1c7397141b888562a48d9888f1595d69572db73be99a024" "fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "bd7b7c5df1174796deefce5debc2d976b264585d51852c962362be83932873d9" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "e11569fd7e31321a33358ee4b232c2d3cf05caccd90f896e1df6cab228191109" default)))
  '(elpy-modules
    (quote
-    (elpy-module-company elpy-module-eldoc elpy-module-flymake
- elpy-module-pyvenv elpy-module-yasnippet elpy-module-django
- elpy-module-sane-defaults))) '(inhibit-startup-screen t)
+    (elpy-module-company elpy-module-eldoc elpy-module-flymake elpy-module-pyvenv elpy-module-yasnippet elpy-module-django elpy-module-sane-defaults)))
+ '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (delight-powerline delight diminish smooth-scrolling
- monokai-light-theme spacemacs-theme fill-column-indicator
- counsel-projectile treemacs-evil treemacs-projectile evil-magit
- projectile magit Magit powerline-evil monokai-theme
- column-marker py-autopep8 exec-path-from-shell conda yasnippet
- elpy better-defaults minimap linum-relative evil ein neotree
- expand-region hungry-delete beacon golden-ratio-scroll-screen
- color-theme solarized-dark-theme solarized-theme planet-theme
- zenburn-theme auto-complete counsel tabbar ace-window
- org-bullets which-key try use-package)))
+    (doom-themes yasnippet-snippets delight-powerline delight diminish smooth-scrolling monokai-light-theme spacemacs-theme fill-column-indicator counsel-projectile treemacs-evil treemacs-projectile evil-magit projectile magit Magit powerline-evil monokai-theme column-marker py-autopep8 exec-path-from-shell conda yasnippet elpy better-defaults minimap linum-relative evil ein neotree expand-region hungry-delete beacon golden-ratio-scroll-screen color-theme solarized-dark-theme solarized-theme planet-theme zenburn-theme auto-complete counsel tabbar ace-window org-bullets which-key try use-package)))
  '(whitespace-global-modes (quote (not dired-mode org-mode))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -184,10 +168,17 @@
 ;;(use-package color-theme
 ;;  :ensure t)
 
-;; (load-theme 'solarized-light t)
+(load-theme 'solarized-dark t)
 ;; gonna try out default theme again..
 
-;; (use-package monokai-light-theme 
+;; get some doom themes
+(use-package doom-themes
+  :ensure t
+  :config
+  )
+;; (load-theme 'doom-nord-light)
+
+; (use-package monokai-light-theme 
 ;;  :ensure t
 ;;  :config (load-theme 'monokai-light t))
 
@@ -276,8 +267,11 @@
 ;; make ein:notebook-login and ein:notebook-open actual commands?
 
 ;; make evil tab character just emulate emacs'
+;; same with return
 (with-eval-after-load 'evil-maps
-  (define-key evil-motion-state-map (kbd "TAB") nil))
+  (define-key evil-motion-state-map (kbd "TAB") nil)
+  (define-key evil-motion-state-map (kbd "RET") nil)
+  (define-key evil-motion-state-map (kbd "SPC") nil))
 ;; install evil!?!?!?!
 (add-to-list 'load-path "~/.emacs.d/evil") 
 (require 'evil)
@@ -305,12 +299,7 @@
       evil-motion-state-cursor '(box "green")
       evil-replace-state-cursor '(box "blue"))
 
-;; get rid of line numbers in org-mode
-(defun nolinum ()
-  (interactive)
-  (message "Deactivated linum mode")
-  (linum-mode 0)
-)
+
 ;; function to adjust our global mode for this
 (define-globalized-minor-mode my-global-linum-mode linum-mode
   (lambda ()
@@ -357,6 +346,9 @@
   ;; :disabled t
   :ensure t)
 (elpy-enable)
+;; use ipython for elpy
+(setq python-shell-interpreter "ipython"
+      python-shell-interpreter-args "-i --simple-prompt")
 
 ;; try out autopep8
 (use-package py-autopep8
@@ -390,9 +382,9 @@
   :config
   (powerline-evil-center-color-theme)
   (set-face-attribute 'mode-line nil
-		      :foreground "Black"
-		      :background "Green"
-		      :box nil)
+  		      :foreground "Black"
+  		      :background "Green"
+  		      :box nil)
   )
 ;; use diminish to take these stupid minor modes away from powerline
 (use-package delight
@@ -588,3 +580,12 @@ For more information, see the function `buffer-menu'."
   :config
   (smooth-scrolling-mode 1)
   )
+
+;; yasnippet
+(use-package yasnippet
+  :ensure t
+  :init
+    (yas-global-mode 1))
+
+(use-package yasnippet-snippets
+  :ensure t) 
