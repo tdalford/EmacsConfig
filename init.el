@@ -1,3 +1,8 @@
+;;; init.el --- Initialization file for Emacs
+;;; Commentary: Emacs Startup File --- initialization for Emacs
+
+;;; Code:
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -12,7 +17,7 @@
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (doom-themes yasnippet-snippets delight-powerline delight diminish smooth-scrolling monokai-light-theme spacemacs-theme fill-column-indicator counsel-projectile treemacs-evil treemacs-projectile evil-magit projectile magit Magit powerline-evil monokai-theme column-marker py-autopep8 exec-path-from-shell conda yasnippet elpy better-defaults minimap linum-relative evil ein neotree expand-region hungry-delete beacon golden-ratio-scroll-screen color-theme solarized-dark-theme solarized-theme planet-theme zenburn-theme auto-complete counsel tabbar ace-window org-bullets which-key try use-package)))
+    (evil-surround flycheck doom-themes yasnippet-snippets delight-powerline delight diminish smooth-scrolling monokai-light-theme spacemacs-theme fill-column-indicator counsel-projectile treemacs-evil treemacs-projectile evil-magit projectile magit Magit powerline-evil monokai-theme column-marker py-autopep8 exec-path-from-shell conda yasnippet elpy better-defaults minimap linum-relative evil ein neotree expand-region hungry-delete beacon golden-ratio-scroll-screen color-theme solarized-dark-theme solarized-theme planet-theme zenburn-theme auto-complete counsel tabbar ace-window org-bullets which-key try use-package)))
  '(whitespace-global-modes (quote (not dired-mode org-mode))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -22,6 +27,10 @@
  '(aw-leading-char-face ((t (:inherit ace-jump-face-foreground :height 3.0)))))
 
 ;; new stuff added from tutorial
+
+
+;;; Commentary:
+;; 
 
 (require 'package)
 (setq package-enable-at-startup nil)
@@ -39,7 +48,7 @@
 	:ensure t)
 
 (use-package which-key
-	:ensure t 
+	:ensure t
 	:config
 	(which-key-mode))
 
@@ -51,6 +60,8 @@
 ;; add indentation
 (setq org-startup-indented t)
 ;; take out tool bar
+;; make the ... turn into better arrows
+(setq org-ellipsis "⤵");; ⤵ ≫ ⚡⚡⚡ 
 
 (tool-bar-mode -1)
 
@@ -113,7 +124,7 @@
     (global-set-key [remap other-window] 'ace-window)
     (custom-set-faces
      '(aw-leading-char-face
-       ((t (:inherit ace-jump-face-foreground :height 3.0))))) 
+       ((t (:inherit ace-jump-face-foreground :height 3.0)))))
     ))
 
 ;; swiper stuff
@@ -178,7 +189,7 @@
   )
 ;; (load-theme 'doom-nord-light)
 
-; (use-package monokai-light-theme 
+; (use-package monokai-light-theme
 ;;  :ensure t
 ;;  :config (load-theme 'monokai-light t))
 
@@ -212,7 +223,7 @@
 ; reduce region)
 (use-package expand-region
 :ensure t
-:config 
+:config
 (global-set-key (kbd "C-=") 'er/expand-region))
 
 ;; end small packages
@@ -247,7 +258,7 @@
 (add-hook 'asm-mode-hook (lambda ()
                            (setq indent-tabs-mode nil) ; use spaces to indent
 			   ; indentation in asm-mode is annoying
-                           (electric-indent-mode -1) 
+                           (electric-indent-mode -1)
                            (setq tab-stop-list (number-sequence 2 60 2))))
 
 (define-key asm-mode-map (kbd "<ret>") 'newline-and-indent)
@@ -273,7 +284,7 @@
   (define-key evil-motion-state-map (kbd "RET") nil)
   (define-key evil-motion-state-map (kbd "SPC") nil))
 ;; install evil!?!?!?!
-(add-to-list 'load-path "~/.emacs.d/evil") 
+(add-to-list 'load-path "~/.emacs.d/evil")
 (require 'evil)
 (evil-mode 1)
 ;; make evil mode beyond the end of a line
@@ -281,9 +292,14 @@
 ;; make evil insert state just be emacs normal state (I know, greedy..)
 (setcdr evil-insert-state-map nil)
 (define-key evil-insert-state-map [escape] 'evil-normal-state)
+;; use evil-surround
+(use-package evil-surround
+  :ensure t
+  :config
+  (global-evil-surround-mode 1))
 
 ;; add dired+-- manually
-(add-to-list 'load-path "~/.emacs.d/lisp") 
+(add-to-list 'load-path "~/.emacs.d/lisp")
 (require 'dired+)
 
 ;; linum mode
@@ -401,6 +417,7 @@
 (delight 'auto-revert-mode nil t)
 (delight 'beacon-mode nil t)
 (delight 'abbrev-mode nil t)
+(delight 'flycheck-mode nil t)
 
 ;; try making C-x C-b actually move cursor to the buffer list
 ;; (global-set-key (kbd "C-x C-b") 'my-list-buffers)
@@ -502,7 +519,7 @@ For more information, see the function `buffer-menu'."
    :config (setq dumb-jump-selector 'ivy) ;; (setq dumb-jump-selector 'helm)
   :ensure
 
-  :config 
+  :config
 ;; (setq dumb-jump-selector 'ivy) ;; (setq dumb-jump-selector 'helm)
 :init
 (dumb-jump-mode)
@@ -588,4 +605,16 @@ For more information, see the function `buffer-menu'."
     (yas-global-mode 1))
 
 (use-package yasnippet-snippets
-  :ensure t) 
+  :ensure t)
+
+;; flycheck!
+(use-package flycheck
+  :ensure t
+  :config
+  (global-flycheck-mode t)
+  )
+
+
+(provide 'init)
+
+;;; init.el ends here
