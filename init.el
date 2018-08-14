@@ -308,8 +308,8 @@
 (setq linum-relative-current-symbol "")
 
 ;; add different cursor color support!
-(setq evil-insert-state-cursor '((bar . 5) "yellow")
-      evil-normal-state-cursor '(box "purple")
+(setq evil-insert-state-cursor '((bar . 2) "white")
+      evil-normal-state-cursor '(box "white")
       evil-emacs-state-cursor  '(box "black")
       evil-visual-state-cursor '(box "orange")
       evil-motion-state-cursor '(box "green")
