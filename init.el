@@ -10,14 +10,14 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
-    ("b35a14c7d94c1f411890d45edfb9dc1bd61c5becd5c326790b51df6ebf60f402" "fd2cf9ad9895d93138dd67215702280e0db56e796ee62dea92043eed4b23177c" "d1b4990bd599f5e2186c3f75769a2c5334063e9e541e37514942c27975700370" "1c082c9b84449e54af757bcae23617d11f563fc9f33a832a8a2813c4d7dfb652" "4697a2d4afca3f5ed4fdf5f715e36a6cac5c6154e105f3596b44a4874ae52c45" "151bde695af0b0e69c3846500f58d9a0ca8cb2d447da68d7fbf4154dcf818ebc" "6b289bab28a7e511f9c54496be647dc60f5bd8f9917c9495978762b99d8c96a0" "b4c13d25b1f9f66eb769e05889ee000f89d64b089f96851b6da643cee4fdab08" "fe666e5ac37c2dfcf80074e88b9252c71a22b6f5d2f566df9a7aa4f9bea55ef8" "3a3de615f80a0e8706208f0a71bbcc7cc3816988f971b6d237223b6731f91605" "f0dc4ddca147f3c7b1c7397141b888562a48d9888f1595d69572db73be99a024" "fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "bd7b7c5df1174796deefce5debc2d976b264585d51852c962362be83932873d9" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "e11569fd7e31321a33358ee4b232c2d3cf05caccd90f896e1df6cab228191109" default)))
+    ("ecba61c2239fbef776a72b65295b88e5534e458dfe3e6d7d9f9cb353448a569e" "84d2f9eeb3f82d619ca4bfffe5f157282f4779732f48a5ac1484d94d5ff5b279" "c74e83f8aa4c78a121b52146eadb792c9facc5b1f02c917e3dbb454fca931223" "b35a14c7d94c1f411890d45edfb9dc1bd61c5becd5c326790b51df6ebf60f402" "fd2cf9ad9895d93138dd67215702280e0db56e796ee62dea92043eed4b23177c" "d1b4990bd599f5e2186c3f75769a2c5334063e9e541e37514942c27975700370" "1c082c9b84449e54af757bcae23617d11f563fc9f33a832a8a2813c4d7dfb652" "4697a2d4afca3f5ed4fdf5f715e36a6cac5c6154e105f3596b44a4874ae52c45" "151bde695af0b0e69c3846500f58d9a0ca8cb2d447da68d7fbf4154dcf818ebc" "6b289bab28a7e511f9c54496be647dc60f5bd8f9917c9495978762b99d8c96a0" "b4c13d25b1f9f66eb769e05889ee000f89d64b089f96851b6da643cee4fdab08" "fe666e5ac37c2dfcf80074e88b9252c71a22b6f5d2f566df9a7aa4f9bea55ef8" "3a3de615f80a0e8706208f0a71bbcc7cc3816988f971b6d237223b6731f91605" "f0dc4ddca147f3c7b1c7397141b888562a48d9888f1595d69572db73be99a024" "fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "bd7b7c5df1174796deefce5debc2d976b264585d51852c962362be83932873d9" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "e11569fd7e31321a33358ee4b232c2d3cf05caccd90f896e1df6cab228191109" default)))
  '(elpy-modules
    (quote
     (elpy-module-company elpy-module-eldoc elpy-module-flymake elpy-module-pyvenv elpy-module-yasnippet elpy-module-django elpy-module-sane-defaults)))
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (evil-surround flycheck doom-themes yasnippet-snippets delight-powerline delight diminish smooth-scrolling monokai-light-theme spacemacs-theme fill-column-indicator counsel-projectile treemacs-evil treemacs-projectile evil-magit projectile magit Magit powerline-evil monokai-theme column-marker py-autopep8 exec-path-from-shell conda yasnippet elpy better-defaults minimap linum-relative evil ein neotree expand-region hungry-delete beacon golden-ratio-scroll-screen color-theme solarized-dark-theme solarized-theme planet-theme zenburn-theme auto-complete counsel tabbar ace-window org-bullets which-key try use-package)))
+    (solarized emacs-solarized minted ob-ipython airline-themes smart-mode-line-powerline-theme smart-line-mode-powerline-theme emacs-powerline smart-mode-line smart-line-mode evil-surround flycheck doom-themes yasnippet-snippets delight-powerline delight diminish smooth-scrolling monokai-light-theme spacemacs-theme fill-column-indicator counsel-projectile treemacs-evil treemacs-projectile evil-magit projectile magit Magit powerline-evil monokai-theme column-marker py-autopep8 exec-path-from-shell conda yasnippet elpy better-defaults minimap linum-relative evil ein neotree expand-region hungry-delete beacon golden-ratio-scroll-screen color-theme solarized-dark-theme solarized-theme planet-theme zenburn-theme auto-complete counsel tabbar ace-window org-bullets which-key try use-package)))
  '(whitespace-global-modes (quote (not dired-mode org-mode))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -52,6 +52,19 @@
 	:config
 	(which-key-mode))
 
+;; make current theme work for org mode
+(defface org-block-begin-line
+  '((t (:underline "#A7A6AA" :foreground "#008ED1" :background "#EAEAFF")))
+  "Face used for the line delimiting the begin of source blocks.")
+
+(defface org-block-background
+  '((t (:background "honeydew")));;#1C2833
+  "Face used for the source block background.")
+
+(defface org-block-end-line
+  '((t (:overline "#A7A6AA" :foreground "#008ED1" :background "#EAEAFF")))
+  "Face used for the line delimiting the end of source blocks.")
+
 ;; org mode stuff
 (use-package org-bullets
   :ensure t
@@ -62,6 +75,8 @@
 ;; take out tool bar
 ;; make the ... turn into better arrows
 (setq org-ellipsis "⤵");; ⤵ ≫ ⚡⚡⚡ 
+;; use beamer for org mode
+(require 'ox-beamer)
 
 (tool-bar-mode -1)
 
@@ -157,7 +172,7 @@
     (global-set-key (kbd "C-S-o") 'counsel-rhythmbox)
     (define-key read-expression-map (kbd "C-r") 'counsel-expression-history)
     ;; make it so that the search wraps
-    (setq ivy-wrap t)
+    ;; (setq ivy-wrap t)
     ;; add counsel-yank-pop
     (global-set-key (kbd "M-y") 'counsel-yank-pop)
     ))
@@ -179,19 +194,16 @@
 ;;(use-package color-theme
 ;;  :ensure t)
 
-(load-theme 'solarized-dark t)
+;; (load-theme 'solarized-dark t)
+;; (load-theme 'monokai)
 ;; gonna try out default theme again..
 
 ;; get some doom themes
 (use-package doom-themes
   :ensure t
   :config
-  )
+ )
 ;; (load-theme 'doom-nord-light)
-
-; (use-package monokai-light-theme
-;;  :ensure t
-;;  :config (load-theme 'monokai-light t))
 
 (use-package undo-tree
 :ensure t
@@ -274,8 +286,9 @@
   :ensure t
   )
 (setq ein:use-auto-complete t)
-
 ;; make ein:notebook-login and ein:notebook-open actual commands?
+(global-set-key (kbd "C-x C-l") 'ein:notebooklist-login)
+(global-set-key (kbd "C-x C-o") 'ein:notebooklist-open)
 
 ;; make evil tab character just emulate emacs'
 ;; same with return
@@ -308,8 +321,8 @@
 (setq linum-relative-current-symbol "")
 
 ;; add different cursor color support!
-(setq evil-insert-state-cursor '((bar . 2) "white")
-      evil-normal-state-cursor '(box "white")
+(setq evil-insert-state-cursor '((bar . 2) "purple")
+      evil-normal-state-cursor '(box "purple")
       evil-emacs-state-cursor  '(box "black")
       evil-visual-state-cursor '(box "orange")
       evil-motion-state-cursor '(box "green")
@@ -317,10 +330,11 @@
 
 
 ;; function to adjust our global mode for this
+;; keepp linums on for org mode.. after all that
 (define-globalized-minor-mode my-global-linum-mode linum-mode
   (lambda ()
     (unless (or (minibufferp)
-                (derived-mode-p 'doc-view-mode 'org-mode 'eshell-mode))
+                (derived-mode-p 'doc-view-mode 'eshell-mode))
       (linum-relative-mode 1))))
 (my-global-linum-mode)
 
@@ -387,22 +401,51 @@
 ;; redefine c-v to scroll line by line
 (define-key evil-normal-state-map (kbd "C-v") 'evil-scroll-line-down)
 
-;; (use-package powerline
-;;   :ensure t
-;;   :config
-;;  (powerline-center-evil-theme)
-;;   )
-
-(use-package powerline-evil
+(use-package powerline;;-evil
   :ensure t
   :config
-  (powerline-evil-center-color-theme)
+  (powerline-center-evil-theme)
+  ;;(setq powerline-color1 "#073642") ;; "#073642"
+  ;;(setq powerline-color2 "#002b36")
+  ;; (setq powerline-image-apple-rgb t)
+
   (set-face-attribute 'mode-line nil
-  		      :foreground "Black"
-  		      :background "Green"
-  		      :box nil)
+		      :inverse-video nil
+		      :foreground "#303030" ;;#fdf6e3
+		      :background "OliveDrab3";;#2aa198
+		      :box nil)
+  (set-face-attribute 'mode-line-inactive nil
+		      :inverse-video nil
+		      :box nil)
+  (setq ns-use-srgb-colorspace nil)
   )
-;; use diminish to take these stupid minor modes away from powerline
+;; (use-package airline-themes
+;;   :ensure t
+;;   :config
+;;   (airline-themes-set-modeline)
+;;   (setq airline-display-directory nil)
+;;   )
+
+;; (setq sml/theme 'powerline)
+;; (use-package smart-mode-line-powerline-theme
+;;   :ensure t
+;;   )
+;; (use-package smart-mode-line
+;;   :ensure t
+;;   :config
+;;   (sml/setup)
+;;   )
+
+;; (use-package powerline-evil
+;;   :ensure t
+;;   :config
+;;   (powerline-evil-center-color-theme)
+;;   (set-face-attribute 'mode-line nil
+;;   		      :foreground "Black"
+;;   		      :background "Green"
+;;   		      :box nil)
+;;   )
+;; ;; use diminish to take these stupid minor modes away from powerline
 (use-package delight
   :ensure t
   :config
@@ -462,6 +505,7 @@ For more information, see the function `buffer-menu'."
   (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
   (projectile-mode +1)
   :delight '(:eval (concat " " (projectile-project-name)))
+  (setq projectile-mode-line "Projectile")
   )
 
 ; use counsel-projectile as well
@@ -587,6 +631,8 @@ For more information, see the function `buffer-menu'."
                         cua-scroll-down
                         cua-scroll-up))
           (ding))))
+;; okay I'm just gonnna turn this stupid thing off
+(setq ring-bell-function 'ignore)
 
 ;; yeah I wasn't actually getting this to work properly
 (require 'smart-dash)
@@ -614,7 +660,106 @@ For more information, see the function `buffer-menu'."
   (global-flycheck-mode t)
   )
 
+;; add in support for ipython in org mode
+(use-package ob-ipython
+  :ensure t
+  :config
+  (org-babel-do-load-languages
+   'org-babel-load-languages
+   '((ipython . t)
+     ;; other languages..
+     ))
+  (setq org-confirm-babel-evaluate nil) 
+  ;;; display/update images in the buffer after I evaluate
+  (add-hook 'org-babel-after-execute-hook 'org-display-inline-images 'append)
+  )
+  
+;; fontify code in org blocks
+(setq org-src-fontify-natively t)
 
-(provide 'init)
+;; gonna try loading here
+;; (load-theme 'solarized-light)
 
-;;; init.el ends here
+;; or for treemacs users
+(doom-themes-treemacs-config)
+
+;; Corrects (and improves) org-mode's native fontification.
+(doom-themes-org-config)
+
+;; disable emacs lisp flycheck
+(setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc))
+
+;; don't let cursor blink
+(blink-cursor-mode 0)
+
+;; org-mode stuff for keyworks-- kinda long but whatever
+(setq org-todo-keywords
+      '(
+        (sequence "IDEA(i)" "TODO(t)" "STARTED(s)" "NEXT(n)" "WAITING(w)" "|" "DONE(d)")
+        (sequence "|" "CANCELED(c)" "DELEGATED(l)" "SOMEDAY(f)")
+        ))
+
+(setq org-todo-keyword-faces
+      '(("IDEA" . (:foreground "GoldenRod" :weight bold))
+        ("NEXT" . (:foreground "IndianRed1" :weight bold))   
+        ("STARTED" . (:foreground "OrangeRed" :weight bold))
+        ("WAITING" . (:foreground "coral" :weight bold)) 
+        ("CANCELED" . (:foreground "LimeGreen" :weight bold))
+        ("DELEGATED" . (:foreground "LimeGreen" :weight bold))
+        ("SOMEDAY" . (:foreground "LimeGreen" :weight bold))
+        ))
+
+(setq org-tag-persistent-alist 
+      '((:startgroup . nil)
+        ("HOME" . ?h) 
+        ("RESEARCH" . ?r)
+        ("TEACHING" . ?t)
+        (:endgroup . nil)
+        (:startgroup . nil)
+        ("OS" . ?o) 
+        ("DEV" . ?d)
+        ("WWW" . ?w)
+        (:endgroup . nil)
+        (:startgroup . nil)
+        ("EASY" . ?e)
+        ("MEDIUM" . ?m)
+        ("HARD" . ?a)
+        (:endgroup . nil)
+        ("URGENT" . ?u)
+        ("KEY" . ?k)
+        ("BONUS" . ?b)
+        ("noexport" . ?x)  
+        )
+      )
+
+(setq org-tag-faces
+      '(
+        ("HOME" . (:foreground "GoldenRod" :weight bold))
+        ("RESEARCH" . (:foreground "GoldenRod" :weight bold))
+        ("TEACHING" . (:foreground "GoldenRod" :weight bold))
+        ("OS" . (:foreground "IndianRed1" :weight bold))   
+        ("DEV" . (:foreground "IndianRed1" :weight bold))   
+        ("WWW" . (:foreground "IndianRed1" :weight bold))
+        ("URGENT" . (:foreground "Red" :weight bold))  
+        ("KEY" . (:foreground "Red" :weight bold))  
+        ("EASY" . (:foreground "OrangeRed" :weight bold))  
+        ("MEDIUM" . (:foreground "OrangeRed" :weight bold))  
+        ("HARD" . (:foreground "OrangeRed" :weight bold))  
+        ("BONUS" . (:foreground "GoldenRod" :weight bold))
+        ("noexport" . (:foreground "LimeGreen" :weight bold))  
+        )
+)
+;; switch command and alt keys for mac
+;;; I prefer cmd key for meta
+(when (eq system-type 'darwin)
+  (setq mac-option-key-is-meta nil
+      mac-command-key-is-meta t
+      mac-command-modifier 'meta
+      mac-option-modifier 'none
+      mac-option-modifier 'super))
+;; make alt-h hide emacs
+(global-set-key [(super h)] 'ns-do-hide-emacs)
+
+;; make a custom variable to store ipython kernel
+(defvar curr-kernel ""
+            "The current ipython in use. Defaults to empty string")
