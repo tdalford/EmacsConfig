@@ -1,36 +1,3 @@
-;;; init.el --- Initialization file for Emacs
-;;; Commentary: Emacs Startup File --- initialization for Emacs
-
-;;; Code:
-
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(custom-safe-themes
-   (quote
-    ("ecba61c2239fbef776a72b65295b88e5534e458dfe3e6d7d9f9cb353448a569e" "84d2f9eeb3f82d619ca4bfffe5f157282f4779732f48a5ac1484d94d5ff5b279" "c74e83f8aa4c78a121b52146eadb792c9facc5b1f02c917e3dbb454fca931223" "b35a14c7d94c1f411890d45edfb9dc1bd61c5becd5c326790b51df6ebf60f402" "fd2cf9ad9895d93138dd67215702280e0db56e796ee62dea92043eed4b23177c" "d1b4990bd599f5e2186c3f75769a2c5334063e9e541e37514942c27975700370" "1c082c9b84449e54af757bcae23617d11f563fc9f33a832a8a2813c4d7dfb652" "4697a2d4afca3f5ed4fdf5f715e36a6cac5c6154e105f3596b44a4874ae52c45" "151bde695af0b0e69c3846500f58d9a0ca8cb2d447da68d7fbf4154dcf818ebc" "6b289bab28a7e511f9c54496be647dc60f5bd8f9917c9495978762b99d8c96a0" "b4c13d25b1f9f66eb769e05889ee000f89d64b089f96851b6da643cee4fdab08" "fe666e5ac37c2dfcf80074e88b9252c71a22b6f5d2f566df9a7aa4f9bea55ef8" "3a3de615f80a0e8706208f0a71bbcc7cc3816988f971b6d237223b6731f91605" "f0dc4ddca147f3c7b1c7397141b888562a48d9888f1595d69572db73be99a024" "fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "bd7b7c5df1174796deefce5debc2d976b264585d51852c962362be83932873d9" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "e11569fd7e31321a33358ee4b232c2d3cf05caccd90f896e1df6cab228191109" default)))
- '(elpy-modules
-   (quote
-    (elpy-module-company elpy-module-eldoc elpy-module-flymake elpy-module-pyvenv elpy-module-yasnippet elpy-module-django elpy-module-sane-defaults)))
- '(inhibit-startup-screen t)
- '(package-selected-packages
-   (quote
-    (ox-ipynb htmlize org-evil haskell-mode solarized emacs-solarized minted ob-ipython airline-themes smart-mode-line-powerline-theme smart-line-mode-powerline-theme emacs-powerline smart-mode-line smart-line-mode evil-surround flycheck doom-themes yasnippet-snippets delight-powerline delight diminish smooth-scrolling monokai-light-theme spacemacs-theme fill-column-indicator counsel-projectile treemacs-evil treemacs-projectile evil-magit projectile magit Magit powerline-evil monokai-theme column-marker py-autopep8 exec-path-from-shell conda yasnippet elpy better-defaults minimap linum-relative evil ein neotree expand-region hungry-delete beacon golden-ratio-scroll-screen color-theme solarized-dark-theme solarized-theme planet-theme zenburn-theme auto-complete counsel tabbar ace-window org-bullets which-key try use-package)))
- '(whitespace-global-modes (quote (not dired-mode org-mode))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(aw-leading-char-face ((t (:inherit ace-jump-face-foreground :height 3.0)))))
-
-;; new stuff added from tutorial
-
-
-;;; Commentary:
-;; 
 
 (require 'package)
 (setq package-enable-at-startup nil)
@@ -86,6 +53,13 @@
 ;;(setq ido-enable-flex-matching t)
 ;;(setq ido-everywhere t)
 ;;(ido-mode 1)
+
+;; get some doom themes
+(use-package doom-themes
+  :ensure t
+  :config
+ )
+
 
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 ;; more ibuffer stuff from online
@@ -200,13 +174,6 @@
 ;; (load-theme 'monokai)
 ;; gonna try out default theme again..
 
-;; get some doom themes
-(use-package doom-themes
-  :ensure t
-  :config
- )
-;; (load-theme 'doom-nord-light)
-
 (use-package undo-tree
 :ensure t
   :init
@@ -303,7 +270,9 @@
   (define-key evil-motion-state-map (kbd "SPC") nil))
 ;; install evil!?!?!?!
 (add-to-list 'load-path "~/.emacs.d/evil")
-(require 'evil)
+(use-package evil
+  :ensure t
+  )
 (evil-mode 1)
 ;; make evil mode beyond the end of a line
 (setq evil-move-beyond-eol t)
@@ -315,10 +284,6 @@
   :ensure t
   :config
   (global-evil-surround-mode 1))
-
-;; add dired+-- manually
-(add-to-list 'load-path "~/.emacs.d/lisp")
-(require 'dired+)
 
 ;; linum mode
 ;;(linum-mode)
@@ -671,7 +636,6 @@ For more information, see the function `buffer-menu'."
   :ensure t
   :config
   ;; (global-flycheck-mode t)
-  )
 
 ;; add in support for ipython in org mode
 (use-package ob-ipython
