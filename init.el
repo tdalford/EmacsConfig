@@ -1,4 +1,4 @@
-;;; init.el --- Initialization file for Emacs
+;;; innit.el --- Initialization file for Emacs
 ;;; Commentary: Emacs Startup File --- initialization for Emacs
 
 ;;; Code:
@@ -8,23 +8,46 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(beacon-color "pale green")
  '(custom-safe-themes
    (quote
-    ("ecba61c2239fbef776a72b65295b88e5534e458dfe3e6d7d9f9cb353448a569e" "84d2f9eeb3f82d619ca4bfffe5f157282f4779732f48a5ac1484d94d5ff5b279" "c74e83f8aa4c78a121b52146eadb792c9facc5b1f02c917e3dbb454fca931223" "b35a14c7d94c1f411890d45edfb9dc1bd61c5becd5c326790b51df6ebf60f402" "fd2cf9ad9895d93138dd67215702280e0db56e796ee62dea92043eed4b23177c" "d1b4990bd599f5e2186c3f75769a2c5334063e9e541e37514942c27975700370" "1c082c9b84449e54af757bcae23617d11f563fc9f33a832a8a2813c4d7dfb652" "4697a2d4afca3f5ed4fdf5f715e36a6cac5c6154e105f3596b44a4874ae52c45" "151bde695af0b0e69c3846500f58d9a0ca8cb2d447da68d7fbf4154dcf818ebc" "6b289bab28a7e511f9c54496be647dc60f5bd8f9917c9495978762b99d8c96a0" "b4c13d25b1f9f66eb769e05889ee000f89d64b089f96851b6da643cee4fdab08" "fe666e5ac37c2dfcf80074e88b9252c71a22b6f5d2f566df9a7aa4f9bea55ef8" "3a3de615f80a0e8706208f0a71bbcc7cc3816988f971b6d237223b6731f91605" "f0dc4ddca147f3c7b1c7397141b888562a48d9888f1595d69572db73be99a024" "fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "bd7b7c5df1174796deefce5debc2d976b264585d51852c962362be83932873d9" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "e11569fd7e31321a33358ee4b232c2d3cf05caccd90f896e1df6cab228191109" default)))
+    ("c433c87bd4b64b8ba9890e8ed64597ea0f8eb0396f4c9a9e01bd20a04d15d358" "2809bcb77ad21312897b541134981282dc455ccd7c14d74cc333b6e549b824f3" "ecba61c2239fbef776a72b65295b88e5534e458dfe3e6d7d9f9cb353448a569e" "84d2f9eeb3f82d619ca4bfffe5f157282f4779732f48a5ac1484d94d5ff5b279" "c74e83f8aa4c78a121b52146eadb792c9facc5b1f02c917e3dbb454fca931223" "b35a14c7d94c1f411890d45edfb9dc1bd61c5becd5c326790b51df6ebf60f402" "fd2cf9ad9895d93138dd67215702280e0db56e796ee62dea92043eed4b23177c" "d1b4990bd599f5e2186c3f75769a2c5334063e9e541e37514942c27975700370" "1c082c9b84449e54af757bcae23617d11f563fc9f33a832a8a2813c4d7dfb652" "4697a2d4afca3f5ed4fdf5f715e36a6cac5c6154e105f3596b44a4874ae52c45" "151bde695af0b0e69c3846500f58d9a0ca8cb2d447da68d7fbf4154dcf818ebc" "6b289bab28a7e511f9c54496be647dc60f5bd8f9917c9495978762b99d8c96a0" "b4c13d25b1f9f66eb769e05889ee000f89d64b089f96851b6da643cee4fdab08" "fe666e5ac37c2dfcf80074e88b9252c71a22b6f5d2f566df9a7aa4f9bea55ef8" "3a3de615f80a0e8706208f0a71bbcc7cc3816988f971b6d237223b6731f91605" "f0dc4ddca147f3c7b1c7397141b888562a48d9888f1595d69572db73be99a024" "fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "bd7b7c5df1174796deefce5debc2d976b264585d51852c962362be83932873d9" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "e11569fd7e31321a33358ee4b232c2d3cf05caccd90f896e1df6cab228191109" default)))
+ '(doc-view-continuous t)
  '(elpy-modules
    (quote
     (elpy-module-company elpy-module-eldoc elpy-module-flymake elpy-module-pyvenv elpy-module-yasnippet elpy-module-django elpy-module-sane-defaults)))
  '(inhibit-startup-screen t)
+ '(org-agenda-files nil)
+ '(org-src-fontify-natively t)
+ '(org-src-lang-modes
+   (quote
+    (("jupyter-wolfram-language" . wolfram)
+     ("jupyter-python" . python)
+     ("C" . c)
+     ("C++" . c++)
+     ("asymptote" . asy)
+     ("bash" . sh)
+     ("beamer" . latex)
+     ("calc" . fundamental)
+     ("cpp" . c++)
+     ("ditaa" . artist)
+     ("dot" . fundamental)
+     ("elisp" . emacs-lisp)
+     ("ocaml" . tuareg)
+     ("screen" . shell-script)
+     ("shell" . sh)
+     ("sqlite" . sql))))
  '(package-selected-packages
    (quote
-    (ox-ipynb htmlize org-evil haskell-mode solarized emacs-solarized minted ob-ipython airline-themes smart-mode-line-powerline-theme smart-line-mode-powerline-theme emacs-powerline smart-mode-line smart-line-mode evil-surround flycheck doom-themes yasnippet-snippets delight-powerline delight diminish smooth-scrolling monokai-light-theme spacemacs-theme fill-column-indicator counsel-projectile treemacs-evil treemacs-projectile evil-magit projectile magit Magit powerline-evil monokai-theme column-marker py-autopep8 exec-path-from-shell conda yasnippet elpy better-defaults minimap linum-relative evil ein neotree expand-region hungry-delete beacon golden-ratio-scroll-screen color-theme solarized-dark-theme solarized-theme planet-theme zenburn-theme auto-complete counsel tabbar ace-window org-bullets which-key try use-package)))
+    (ag telephone-line org-beautify-theme org-beautify wolfram-mode org-pdfview pdf-tools jupyter org ox-ipynb htmlize org-evil haskell-mode solarized emacs-solarized minted ob-ipython airline-themes smart-mode-line-powerline-theme smart-line-mode-powerline-theme emacs-powerline smart-mode-line smart-line-mode evil-surround flycheck doom-themes yasnippet-snippets delight-powerline delight diminish smooth-scrolling monokai-light-theme spacemacs-theme fill-column-indicator counsel-projectile treemacs-evil treemacs-projectile evil-magit projectile magit Magit powerline-evil monokai-theme column-marker py-autopep8 exec-path-from-shell conda yasnippet elpy better-defaults minimap linum-relative evil ein neotree expand-region hungry-delete beacon golden-ratio-scroll-screen color-theme solarized-dark-theme solarized-theme planet-theme zenburn-theme auto-complete counsel tabbar ace-window org-bullets which-key try use-package)))
  '(whitespace-global-modes (quote (not dired-mode org-mode))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(aw-leading-char-face ((t (:inherit ace-jump-face-foreground :height 3.0)))))
+ '(aw-leading-char-face ((t (:inherit ace-jump-face-foreground :height 3.0))))
+ '(region ((t (:background "green" :foreground "#fdf6e3")))))
 
 ;; new stuff added from tutorial
 
@@ -52,7 +75,7 @@
 	:config
 	(which-key-mode))
 
-;; make current theme work for org mode
+;; make current theme work for org mode- only works for default
 (defface org-block-begin-line
   '((t (:underline "#A7A6AA" :foreground "#008ED1" :background "#EAEAFF")))
   "Face used for the line delimiting the begin of source blocks.")
@@ -196,7 +219,11 @@
 ;;(use-package color-theme
 ;;  :ensure t)
 
-;; (load-theme 'solarized-dark t)
+(load-theme 'solarized-light t)
+;; make the modeline high contrast
+(setq solarized-high-contrast-mode-line t)
+;; make the fringe stand out from the background
+(setq solarized-distinct-fringe-background t)
 ;; (load-theme 'monokai)
 ;; gonna try out default theme again..
 
@@ -223,7 +250,7 @@
   (beacon-mode 1)
 ; this color looks good for the zenburn theme but not for the one
 ; I'm using for the videos
-; (setq beacon-color "#666600")
+ ;; (setq beacon-color "pale green")
 )
 
 ; deletes all the whitespace when you hit backspace or delete
@@ -326,8 +353,8 @@
 (setq linum-relative-current-symbol "")
 
 ;; add different cursor color support!
-(setq evil-insert-state-cursor '((bar . 2) "purple")
-      evil-normal-state-cursor '(box "purple")
+(setq evil-insert-state-cursor '((bar . 2) "gray50")
+      evil-normal-state-cursor '(box "gray50")
       evil-emacs-state-cursor  '(box "black")
       evil-visual-state-cursor '(box "orange")
       evil-motion-state-cursor '(box "green")
@@ -338,9 +365,19 @@
 (define-globalized-minor-mode my-global-linum-mode linum-mode
   (lambda ()
     (unless (or (minibufferp)
-                (derived-mode-p 'doc-view-mode 'eshell-mode 'org-mode))
+                (derived-mode-p 'doc-view-mode 'eshell-mode
+                'org-mode 'pdf-view-mode))
       (linum-relative-mode 1))))
-(my-global-linum-mode)
+;; (my-global-linum-mode)
+
+
+(define-globalized-minor-mode my-global-display-line-numbers-mode display-line-numbers-mode
+  (lambda ()
+    (unless (or (minibufferp)
+                (derived-mode-p 'doc-view-mode 'eshell-mode
+                'pdf-view-mode)) ;; org-mode
+      (display-line-numbers-mode 1))))
+(my-global-display-line-numbers-mode)
 
 ;; ;; Python stuff
 
@@ -392,6 +429,8 @@
   )
 (add-hook 'python-mode-hook
           'py-autopep8-enable-on-save
+	  ;; make flycheck only work over lines
+	  ;; (setq flycheck-highlighting-mode 'lines')
           )
 
 (add-hook 'elpy-mode-hook
@@ -413,24 +452,24 @@
 ;; redefine c-; to take the place of tab/c-i in evil normal made
 (define-key evil-normal-state-map (kbd "C-;") 'evil-jump-forward)
 
-(use-package powerline;;-evil
-  :ensure t
-  :config
-  (powerline-center-evil-theme)
-  ;;(setq powerline-color1 "#073642") ;; "#073642"
-  ;;(setq powerline-color2 "#002b36")
-  ;; (setq powerline-image-apple-rgb t)
+;; (use-package powerline;;-evil
+;;   :ensure t
+;;   :config
+;;   (powerline-center-evil-theme)
+;;   ;;(setq powerline-color1 "#073642") ;; "#073642"
+;;   ;;(setq powerline-color2 "#002b36")
+;;   ;; (setq powerline-image-apple-rgb t)
 
-  (set-face-attribute 'mode-line nil
-		      :inverse-video nil
-		      :foreground "#303030" ;;#fdf6e3
-		      :background "OliveDrab3";;#2aa198
-		      :box nil)
-  (set-face-attribute 'mode-line-inactive nil
-		      :inverse-video nil
-		      :box nil)
-  (setq ns-use-srgb-colorspace nil)
-  )
+;;   ;; (set-face-attribute 'mode-line nil
+;;   ;; 		      :inverse-video nil
+;;   ;; 		      :foreground "#303030" ;;#fdf6e3
+;;   ;; 		      :background "OliveDrab3";;#2aa198
+;;   ;; 		      :box nil)
+;;   ;; (set-face-attribute 'mode-line-inactive nil
+;;   ;; 		      :inverse-video nil
+;;   ;; 		      :box nil)
+;;   ;; (setq ns-use-srgb-colorspace nil)
+;;   )
 ;; (use-package airline-themes
 ;;   :ensure t
 ;;   :config
@@ -447,32 +486,6 @@
 ;;   :config
 ;;   (sml/setup)
 ;;   )
-
-;; (use-package powerline-evil
-;;   :ensure t
-;;   :config
-;;   (powerline-evil-center-color-theme)
-;;   (set-face-attribute 'mode-line nil
-;;   		      :foreground "Black"
-;;   		      :background "Green"
-;;   		      :box nil)
-;;   )
-;; ;; use diminish to take these stupid minor modes away from powerline
-(use-package delight
-  :ensure t
-  :config
-  )
-(require 'delight-powerline)
-(delight 'projectile-mode nil t)
-(delight 'undo-tree-mode nil t)
-(delight 'ivy-mode nil t)
-(delight 'linum-relative-mode nil t)
-(delight 'auto-complete-mode nil t)
-(delight 'which-key-mode nil t)
-(delight 'auto-revert-mode nil t)
-(delight 'beacon-mode nil t)
-(delight 'abbrev-mode nil t)
-(delight 'flycheck-mode nil t)
 
 ;; try making C-x C-b actually move cursor to the buffer list
 ;; (global-set-key (kbd "C-x C-b") 'my-list-buffers)
@@ -504,6 +517,8 @@ For more information, see the function `buffer-menu'."
 (use-package magit
   :ensure t
   :config
+  (setq magit-commit-show-diff nil
+	magit-revert-buffers 1)
  )
 ;; evil-magit?
 (use-package evil-magit
@@ -511,19 +526,19 @@ For more information, see the function `buffer-menu'."
   )
 
 ;; projectile!
-(use-package projectile
-  :ensure t
-  :config
-  (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
-  (projectile-mode +1)
-  :delight '(:eval (concat " " (projectile-project-name)))
-  (setq projectile-mode-line "Projectile")
-  )
+;; (use-package projectile
+;;   :ensure t
+;;   :config
+;;   (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+;;   (projectile-mode +1)
+;;   :delight '(:eval (concat " " (projectile-project-name)))
+;;   (setq projectile-mode-line "Projectile")
+;;   )
 
 ; use counsel-projectile as well
-(use-package counsel-projectile
-  :ensure t
-  )
+;; (use-package counsel-projectile
+;;   :ensure t
+;;   )
 
 ;; treemacs
 (use-package treemacs
@@ -654,7 +669,7 @@ For more information, see the function `buffer-menu'."
 (use-package smooth-scrolling
   :ensure t
   :config
-  (smooth-scrolling-mode 1)
+  ;; (smooth-scrolling-mode 1)
   )
 
 ;; yasnippet
@@ -673,22 +688,43 @@ For more information, see the function `buffer-menu'."
   ;; (global-flycheck-mode t)
   )
 
-;; add in support for ipython in org mode
-(use-package ob-ipython
+;; emacs-jupyter!
+(use-package jupyter
   :ensure t
   :config
+
   (org-babel-do-load-languages
    'org-babel-load-languages
-   '((ipython . t)
+   '(;;(ipython . t) ;; may need to disable for jupyter...
      (latex . t)
      ;; other languages..
+     ;; try using jupyter
+     (jupyter . t)
      ))
   (setq org-confirm-babel-evaluate nil) 
   ;;; display/update images in the buffer after I evaluate
   (add-hook 'org-babel-after-execute-hook 'org-display-inline-images 'append)
+
   )
+
+;; ;; add in support for ipython in org mode
+;; (use-package ob-ipython
+;;   :ensure t
+;;   :config
+;;   (org-babel-do-load-languages
+;;    'org-babel-load-languages
+;;    '(;;(ipython . t) ;; may need to disable for jupyter...
+;;      (latex . t)
+;;      ;; other languages..
+;;      ;; try using jupyter
+;;      (jupyter . t)
+;;      ))
+;;   (setq org-confirm-babel-evaluate nil) 
+;;   ;;; display/update images in the buffer after I evaluate
+;;   (add-hook 'org-babel-after-execute-hook 'org-display-inline-images 'append)
+;;   )
 ;; add in export functionality
-;; (require 'ox-ipynb)
+(require 'jupyter-ipynb)
   
 ;; fontify code in org blocks
 (setq org-src-fontify-natively t)
@@ -699,7 +735,7 @@ For more information, see the function `buffer-menu'."
 (setq org-src-preserve-indentation t)
 
 ;; gonna try loading here
-;; (load-theme 'solarized-light)
+;; (load-theme 'solarized-light t)
 
 ;; or for treemacs users
 (doom-themes-treemacs-config)
@@ -783,27 +819,29 @@ For more information, see the function `buffer-menu'."
     (add-hook 'htmlize-before-hook #'modi/htmlize-before-hook-fci-disable)
     (add-hook 'htmlize-after-hook #'modi/htmlize-after-hook-fci-enable-maybe))
 
-;; update org mode latex export
 (setq org-latex-listings 'minted
       org-latex-packages-alist '(("" "minted"))
-      
       org-latex-pdf-process
       '("pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"
         "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
 
 (setq org-latex-minted-options
-           '(("frame" "lines")
-             ("fontsize" "\\scriptsize")
+           '(("frame" "single")
+             ("fontsize" "auto")
              ))
 
 (setq org-latex-verbatim-options
-           '(("frame" "lines")
-             ("fontsize" "\\scriptsize")
+           '(("frame" "single")
+             ("fontsize" "auto")
              ))
 
 ;; make it so minted uses python style sytnax highlihgting for ipython
 (add-to-list 'org-latex-minted-langs '(ipython "python"))
-;; make it so org blocks don't export
+
+;; make minted work with wolfram language!
+(add-to-list 'org-latex-minted-langs '(jupyter-wolfram-language "text"))
+
+;; make it so org blocks don't evaluate on export
 (setq org-export-babel-evaluate nil)
 ;; highlight latex stuff in org
 (setq org-highlight-latex-and-related '(latex))
@@ -825,8 +863,8 @@ For more information, see the function `buffer-menu'."
 ;;; beamer stuff
 (eval-after-load "ox-latex"
 
-  ;; update the list of LaTeX classes and associated header (encoding, etc.)
-  ;; and structure
+  ;; update the list of LaTeX classes and associated header (encoding,
+  ;; etc.)  and structure
   '(add-to-list 'org-latex-classes
                 `("beamer"
                   ,(concat "\\documentclass[presentation]{beamer}\n"
@@ -843,3 +881,195 @@ For more information, see the function `buffer-menu'."
             (setq tab-stop-list (number-sequence 2 80 2))
             (setq indent-line-function 'indent-relative)
             (haskell-indentation-mode 0)))
+
+;; good default image width.
+(setq org-latex-image-default-width "10cm") 
+;; add flyspell to org mode.
+(add-hook 'org-mode-hook 'turn-on-flyspell)
+;; change ispell location to work.
+(setq ispell-program-name "/usr/local/bin/aspell")
+
+;; display relative line numbers
+;; (global-display-line-numbers-mode)
+(setq display-line-numbers-type 'relative)
+
+;; use pdf tools
+(use-package pdf-tools
+    :ensure t
+    :config
+    (pdf-tools-install)
+    (setq-default pdf-view-display-size 'fit-page)
+    (bind-keys :map pdf-view-mode-map
+        ("\\" . hydra-pdftools/body)
+        ("<s-spc>" .  pdf-view-scroll-down-or-next-page)
+        ("g"  . pdf-view-first-page)
+        ("G"  . pdf-view-last-page)
+        ("l"  . image-forward-hscroll)
+        ("h"  . image-backward-hscroll)
+        ("j"  . pdf-view-next-page)
+        ("k"  . pdf-view-previous-page)
+        ("e"  . pdf-view-goto-page)
+        ("u"  . pdf-view-revert-buffer)
+        ("al" . pdf-annot-list-annotations)
+        ("ad" . pdf-annot-delete)
+        ("aa" . pdf-annot-attachment-dired)
+        ("am" . pdf-annot-add-markup-annotation)
+        ("at" . pdf-annot-add-text-annotation)
+        ("y"  . pdf-view-kill-ring-save)
+        ("i"  . pdf-misc-display-metadata)
+        ("s"  . pdf-occur)
+        ("b"  . pdf-view-set-slice-from-bounding-box)
+        ("r"  . pdf-view-reset-slice))
+     (use-package org-pdfview
+       :ensure t))
+
+(add-hook 'pdf-view-mode-hook 'auto-revert-mode)
+
+(add-hook 'python-mode-hook
+          (lambda () (interactive)
+            (setq python-fill-docstring-style 'pep-257-nn)
+            (set-fill-column 79)
+            ))
+
+;; org default args for python
+(setq org-babel-default-header-args:jupyter-python '((:async . "yes")
+						     (:session . "py")
+						     (:display . "plain")
+						     (:results . "scalar")
+						     (:exports . "both")))
+
+;; wolfram
+(setq org-babel-default-header-args:jupyter-wolfram-language '((:async . "yes")
+							       (:exports . "both")
+							       (:results . "scalar")
+							       (:session . "wo")
+							       (:display . "plain")
+							       ))
+
+;; try getting wolfram typesetting!
+(use-package wolfram-mode
+  :ensure t
+  :config
+  )
+
+;; (set-face-attribute 'mode-line nil  :height 120)
+(setq x-underline-at-descent-line t)
+
+;; (use-package telephone-line
+;;   :ensure t
+;;   :config
+;;   (telephone-line-mode 1)
+;;   (setq telephone-line-lhs
+;; 	'((evil   . (telephone-line-evil-tag-segment))
+;; 	  (accent . (telephone-line-vc-segment
+;; 		     telephone-line-erc-modified-channels-segment
+;; 		     telephone-line-process-segment))
+;; 	  (nil    . (telephone-line-minor-mode-segment
+;; 		     telephone-line-buffer-segment))))
+;;   (setq telephone-line-rhs
+;; 	'((nil    . (telephone-line-misc-info-segment))
+;; 	  (accent . (telephone-line-major-mode-segment))
+;; 	  (evil   . (telephone-line-airline-position-segment))))
+
+;;   (setq telephone-line-height 20)
+;;   )
+
+(use-package powerline-evil
+  :ensure t
+  :config
+  (powerline-evil-center-color-theme)
+  ;; (set-face-attribute 'mode-line nil
+  ;; 		      :foreground "Black"
+  ;; 		      :background "Green"
+  ;; 		      :box nil)
+
+
+  ;; (setq powerline-color1 "#073642") ;; "#073642"
+  ;; (setq powerline-color2 "#002b36")
+  ;; (setq powerline-image-apple-rgb t)
+
+
+  ;; (set-face-attribute 'mode-line nil
+  ;; 		      :inverse-video nil
+  ;; 		      :foreground "#303030" ;;#fdf6e3
+  ;; 		      :background "OliveDrab3";;#2aa198
+  ;; 		      :box nil)
+  ;; (set-face-attribute 'mode-line-inactive nil
+  ;; 		      :inverse-video nil
+  ;; 		      :box nil)
+
+  (setq ns-use-srgb-colorspace nil)
+
+  (set-face-attribute 'powerline-active2 nil :foreground "gray50" :bold t)
+  (set-face-attribute 'powerline-active2 nil :background "gray90")
+
+  (set-face-attribute 'powerline-active1 nil :foreground "gray30" :bold t)
+  (set-face-attribute 'powerline-active1 nil :background "gray70")
+
+  (set-face-attribute 'powerline-active0 nil :foreground "white")
+  (set-face-attribute 'powerline-active0 nil :background "gray30")
+
+  (set-face-attribute 'mode-line nil
+		      :foreground "white"
+		      :background "gray40"
+		      :bold t)
+  (setq powerline-height 20)
+
+  )
+
+;; change highlight color!
+(set-face-attribute 'region nil :background "orange" :foreground "gray30")
+
+
+;; use delight to take these stupid minor modes away from powerline
+(use-package delight
+  :ensure t
+  :config
+  (delight 'projectile-mode nil t)
+  (delight 'undo-tree-mode nil t)
+  (delight 'ivy-mode nil t)
+  (delight 'linum-relative-mode nil t)
+  (delight 'auto-complete-mode nil t)
+  (delight 'auto-revert-mode nil t)
+  (delight 'magit-mode nil t)
+  (delight 'which-key-mode nil t)
+  (delight 'beacon-mode nil t)
+  (delight 'abbrev-mode nil t)
+  (delight 'flycheck-mode nil t)
+  (delight 'flyspell-mode nil t)
+  (delight 'flymake-mode nil t)
+  (delight 'elpy-mode nil t)
+  )
+(require 'delight-powerline)
+
+;; change org block backgrounds
+(set-face-attribute 'org-block-begin-line nil :background "ivory2")
+(set-face-attribute 'org-block-end-line nil :background "ivory2")
+
+;; make evil normal state easier on the eyes
+(set-face-attribute 'powerline-evil-normal-face nil :background "lime green")
+
+(add-to-list 'org-src-lang-modes '("jupyter-wolfram-language" . "wolfram"))
+
+;; load jupyter keyboard macro convert
+(load-file "~/.emacs.d/macros/jupyter_org_babel_convert.macro")
+(add-hook 'org-mode-hook (lambda () 
+    (local-set-key (kbd "C-c C-g") 'convert-jupyter-babel)
+    ))
+
+
+;; use minimap
+(use-package minimap
+  :ensure t
+  :config
+  )
+
+;; (setq flycheck-check-syntax-automatically '(mode-enabled save))
+
+;; better scrolling
+(setq scroll-conservatively 101) ;; move minimum when cursor exits view, instead of recentering
+(setq mouse-wheel-scroll-amount '(1)) ;; mouse scroll moves 1 line at a time, instead of 5 lines
+(setq mouse-wheel-progressive-speed nil) ;; on a long mouse scroll keep scrolling by 1 line
+
+(use-package ag
+  :ensure t)
