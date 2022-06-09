@@ -1,4 +1,4 @@
-;;; innit.el --- Initialization file for Emacs
+;;; init.el --- Initialization file for Emacs
 ;;; Commentary: Emacs Startup File --- initialization for Emacs
 
 ;;; Code:
@@ -10,19 +10,20 @@
  ;; If there is more than one, they won't work right.
  '(beacon-color "pale green")
  '(custom-safe-themes
-   (quote
-    ("c433c87bd4b64b8ba9890e8ed64597ea0f8eb0396f4c9a9e01bd20a04d15d358" "2809bcb77ad21312897b541134981282dc455ccd7c14d74cc333b6e549b824f3" "ecba61c2239fbef776a72b65295b88e5534e458dfe3e6d7d9f9cb353448a569e" "84d2f9eeb3f82d619ca4bfffe5f157282f4779732f48a5ac1484d94d5ff5b279" "c74e83f8aa4c78a121b52146eadb792c9facc5b1f02c917e3dbb454fca931223" "b35a14c7d94c1f411890d45edfb9dc1bd61c5becd5c326790b51df6ebf60f402" "fd2cf9ad9895d93138dd67215702280e0db56e796ee62dea92043eed4b23177c" "d1b4990bd599f5e2186c3f75769a2c5334063e9e541e37514942c27975700370" "1c082c9b84449e54af757bcae23617d11f563fc9f33a832a8a2813c4d7dfb652" "4697a2d4afca3f5ed4fdf5f715e36a6cac5c6154e105f3596b44a4874ae52c45" "151bde695af0b0e69c3846500f58d9a0ca8cb2d447da68d7fbf4154dcf818ebc" "6b289bab28a7e511f9c54496be647dc60f5bd8f9917c9495978762b99d8c96a0" "b4c13d25b1f9f66eb769e05889ee000f89d64b089f96851b6da643cee4fdab08" "fe666e5ac37c2dfcf80074e88b9252c71a22b6f5d2f566df9a7aa4f9bea55ef8" "3a3de615f80a0e8706208f0a71bbcc7cc3816988f971b6d237223b6731f91605" "f0dc4ddca147f3c7b1c7397141b888562a48d9888f1595d69572db73be99a024" "fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "bd7b7c5df1174796deefce5debc2d976b264585d51852c962362be83932873d9" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "e11569fd7e31321a33358ee4b232c2d3cf05caccd90f896e1df6cab228191109" default)))
+   '("a2cde79e4cc8dc9a03e7d9a42fabf8928720d420034b66aecc5b665bbf05d4e9" "c433c87bd4b64b8ba9890e8ed64597ea0f8eb0396f4c9a9e01bd20a04d15d358" "2809bcb77ad21312897b541134981282dc455ccd7c14d74cc333b6e549b824f3" "ecba61c2239fbef776a72b65295b88e5534e458dfe3e6d7d9f9cb353448a569e" "84d2f9eeb3f82d619ca4bfffe5f157282f4779732f48a5ac1484d94d5ff5b279" "c74e83f8aa4c78a121b52146eadb792c9facc5b1f02c917e3dbb454fca931223" "b35a14c7d94c1f411890d45edfb9dc1bd61c5becd5c326790b51df6ebf60f402" "fd2cf9ad9895d93138dd67215702280e0db56e796ee62dea92043eed4b23177c" "d1b4990bd599f5e2186c3f75769a2c5334063e9e541e37514942c27975700370" "1c082c9b84449e54af757bcae23617d11f563fc9f33a832a8a2813c4d7dfb652" "4697a2d4afca3f5ed4fdf5f715e36a6cac5c6154e105f3596b44a4874ae52c45" "151bde695af0b0e69c3846500f58d9a0ca8cb2d447da68d7fbf4154dcf818ebc" "6b289bab28a7e511f9c54496be647dc60f5bd8f9917c9495978762b99d8c96a0" "b4c13d25b1f9f66eb769e05889ee000f89d64b089f96851b6da643cee4fdab08" "fe666e5ac37c2dfcf80074e88b9252c71a22b6f5d2f566df9a7aa4f9bea55ef8" "3a3de615f80a0e8706208f0a71bbcc7cc3816988f971b6d237223b6731f91605" "f0dc4ddca147f3c7b1c7397141b888562a48d9888f1595d69572db73be99a024" "fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" "a8245b7cc985a0610d71f9852e9f2767ad1b852c2bdea6f4aadc12cce9c4d6d0" "bd7b7c5df1174796deefce5debc2d976b264585d51852c962362be83932873d9" "d677ef584c6dfc0697901a44b885cc18e206f05114c8a3b7fde674fce6180879" "8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "e11569fd7e31321a33358ee4b232c2d3cf05caccd90f896e1df6cab228191109" default))
  '(doc-view-continuous t)
+ '(eglot-connect-timeout 300)
  '(elpy-modules
-   (quote
-    (elpy-module-company elpy-module-eldoc elpy-module-flymake elpy-module-pyvenv elpy-module-yasnippet elpy-module-django elpy-module-sane-defaults)))
+   '(elpy-module-company elpy-module-eldoc elpy-module-flymake elpy-module-pyvenv elpy-module-yasnippet elpy-module-django elpy-module-sane-defaults))
+ '(evil-auto-indent t)
  '(inhibit-startup-screen t)
+ '(org-M-RET-may-split-line '((default)))
  '(org-agenda-files nil)
  '(org-src-fontify-natively t)
  '(org-src-lang-modes
-   (quote
-    (("jupyter-wolfram-language" . wolfram)
+   '(("jupyter-wolfram-language" . wolfram)
      ("jupyter-python" . python)
+     ("jupyter-julia" . julia)
      ("C" . c)
      ("C++" . c++)
      ("asymptote" . asy)
@@ -36,17 +37,17 @@
      ("ocaml" . tuareg)
      ("screen" . shell-script)
      ("shell" . sh)
-     ("sqlite" . sql))))
+     ("sqlite" . sql)))
  '(package-selected-packages
-   (quote
-    (ag telephone-line org-beautify-theme org-beautify wolfram-mode org-pdfview pdf-tools jupyter org ox-ipynb htmlize org-evil haskell-mode solarized emacs-solarized minted ob-ipython airline-themes smart-mode-line-powerline-theme smart-line-mode-powerline-theme emacs-powerline smart-mode-line smart-line-mode evil-surround flycheck doom-themes yasnippet-snippets delight-powerline delight diminish smooth-scrolling monokai-light-theme spacemacs-theme fill-column-indicator counsel-projectile treemacs-evil treemacs-projectile evil-magit projectile magit Magit powerline-evil monokai-theme column-marker py-autopep8 exec-path-from-shell conda yasnippet elpy better-defaults minimap linum-relative evil ein neotree expand-region hungry-delete beacon golden-ratio-scroll-screen color-theme solarized-dark-theme solarized-theme planet-theme zenburn-theme auto-complete counsel tabbar ace-window org-bullets which-key try use-package)))
- '(whitespace-global-modes (quote (not dired-mode org-mode))))
+   '(multi-line company-box company-mode aproject eglot-jl eglot quelpa helm-swoop help-swoop helm evil-tex auctex yaml-mode highlight-numbers sr-speedbar evil-leader evil-goggles ag telephone-line org-beautify-theme org-beautify wolfram-mode org-pdfview pdf-tools jupyter org ox-ipynb htmlize org-evil haskell-mode solarized emacs-solarized minted ob-ipython airline-themes smart-mode-line-powerline-theme smart-line-mode-powerline-theme emacs-powerline smart-mode-line smart-line-mode evil-surround flycheck doom-themes yasnippet-snippets delight-powerline delight diminish smooth-scrolling monokai-light-theme spacemacs-theme fill-column-indicator counsel-projectile treemacs-evil treemacs-projectile evil-magit projectile magit Magit powerline-evil monokai-theme column-marker py-autopep8 exec-path-from-shell conda yasnippet elpy better-defaults minimap linum-relative evil ein neotree expand-region hungry-delete beacon golden-ratio-scroll-screen color-theme solarized-dark-theme solarized-theme planet-theme zenburn-theme auto-complete counsel tabbar ace-window org-bullets which-key try use-package))
+ '(whitespace-global-modes '(not dired-mode org-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(aw-leading-char-face ((t (:inherit ace-jump-face-foreground :height 3.0))))
+ '(preview-face ((t (:background "dark slate gray"))))
  '(region ((t (:background "green" :foreground "#fdf6e3")))))
 
 ;; new stuff added from tutorial
@@ -75,26 +76,26 @@
 	:config
 	(which-key-mode))
 
-;; make current theme work for org mode- only works for default
-(defface org-block-begin-line
-  '((t (:underline "#A7A6AA" :foreground "#008ED1" :background "#EAEAFF")))
-  "Face used for the line delimiting the begin of source blocks.")
+;; make current theme work for org mode and org source blocks
+;; (defface org-block-begin-line
+;;   '((t (:underline "#A7A6AA" :foreground "#008ED1" :background "#EAEAFF")))
+;;   "Face used for the line delimiting the begin of source blocks.")
 
-(defface org-block-background
-  '((t (:background "honeydew")));;#1C2833
-  "Face used for the source block background.")
+;; (defface org-block-background
+;;   '((t (:background "honeydew")));;#1C2833
+;;   "Face used for the source block background.")
 
-(defface org-block-end-line
-  '((t (:overline "#A7A6AA" :foreground "#008ED1" :background "#EAEAFF")))
-  "Face used for the line delimiting the end of source blocks.")
+;; (defface org-block-end-line
+;;   '((t (:overline "#A7A6AA" :foreground "#008ED1" :background "#EAEAFF")))
+;;   "Face used for the line delimiting the end of source blocks.")
 
 ;; org mode stuff
 (use-package org-bullets
   :ensure t
   :config
   (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
-;; add indentation
-(setq org-startup-indented t)
+;; take away indentation
+(setq org-startup-indented nil)
 ;; take out tool bar
 ;; make the ... turn into better arrows
 (setq org-ellipsis "⤵");; ⤵ ≫ ⚡⚡⚡ 
@@ -145,17 +146,6 @@
  ;; Don't show filter groups if there are no buffers in that group
  (setq ibuffer-show-empty-filter-groups nil) ; make ibuffer default
 
-;; use a tabbar
-;; Yeah this was really dumb
-;; (use-package tabbar
-;;   :ensure t
-;;   :config (tabbar-mode 1)
-;;   )
-
-;; set m-left and m-right so that they move across tabs
-;;(global-set-key [M-left] 'tabbar-backward-tab)
-;;(global-set-key [M-right] 'tabbar-forward-tab)
-
 ; ace window mover
 (use-package ace-window
   :ensure t
@@ -167,39 +157,79 @@
        ((t (:inherit ace-jump-face-foreground :height 3.0)))))
     ))
 
-;; swiper stuff
-
-;; it looks like counsel is a requirement for swiper
-(use-package counsel
+;; gonna try switching to helm here
+(use-package helm
   :ensure t
+  :config
+  ;; The default "C-x c" is quite close to "C-x C-c", which quits Emacs.
+  ;; Changed to "C-c h". Note: We must set "C-c h" globally, because we
+  ;; cannot change `helm-command-prefix-key' once `helm-config' is loaded.
+  (global-set-key (kbd "C-c h") 'helm-command-prefix)
+  (global-unset-key (kbd "C-x c"))
+
+  (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action) ; rebind tab to run persistent action
+  (define-key helm-map (kbd "C-i") 'helm-execute-persistent-action) ; make TAB work in terminal
+  (define-key helm-map (kbd "C-z")  'helm-select-action) ; list actions using C-z
+
+  (setq helm-move-to-line-cycle-in-source   nil ; move to end or beginning of source when reaching top or bottom of source.
+  	helm-scroll-amount                    8 ; scroll 8 lines other window using M-<next>/M-<prior>
+  	helm-ff-file-name-history-use-recentf t)
+
+  (helm-mode 1)
+  (global-set-key (kbd "M-x") 'helm-M-x)
+  (setq helm-M-x-fuzzy-match t) ;; optional fuzzy matching for helm-M-x
+  (global-set-key (kbd "M-y") 'helm-show-kill-ring)
+  (global-set-key (kbd "C-x b") 'helm-mini)
+  (setq helm-buffers-fuzzy-matching t
+  	helm-recentf-fuzzy-match    t)
+  (global-set-key (kbd "C-x C-f") 'helm-find-files)
+  (when (executable-find "ack-grep")
+  (setq helm-grep-default-command "ack-grep -Hn --no-group --no-color %e %p %f"
+        helm-grep-default-recurse-command "ack-grep -H --no-group --no-color %e %p %f"))
+  (setq helm-semantic-fuzzy-match t
+  	helm-imenu-fuzzy-match    t)
+  (add-to-list 'helm-sources-using-default-as-input 'helm-source-man-pages)
+  (setq helm-locate-fuzzy-match t)
+  (global-set-key (kbd "C-x r b") #'helm-filtered-bookmarks)
+
+  (setq helm-mini-default-sources '(helm-source-buffers-list
+  				    helm-source-recentf
+  				    helm-source-bookmarks
+  				    helm-source-buffer-not-found))
+  (setq ido-use-virtual-buffers t)
+  (helm-autoresize-mode t)
   )
+
+;; swiper stuff
+;; it looks like counsel is a requirement for swiper
+(use-package counsel)
 
 (use-package swiper
   :ensure try
   :config
   (progn
-    (ivy-mode 1)
-    (setq ivy-use-virtual-buffers t)
+    ;; (ivy-mode 1)
+    ;; (setq ivy-use-virtual-buffers t)
     (global-set-key "\C-s" 'swiper)
-    (global-set-key (kbd "C-c C-r") 'ivy-resume)
-    (global-set-key (kbd "<f6>") 'ivy-resume)
-    (global-set-key (kbd "M-x") 'counsel-M-x)
-    (global-set-key (kbd "C-x C-f") 'counsel-find-file)
-    (global-set-key (kbd "<f1> f") 'counsel-describe-function)
-    (global-set-key (kbd "<f1> v") 'counsel-describe-variable)
-    (global-set-key (kbd "<f1> l") 'counsel-load-library)
-    (global-set-key (kbd "<f2> i") 'counsel-info-lookup-symbol)
-    (global-set-key (kbd "<f2> u") 'counsel-unicode-char)
-    (global-set-key (kbd "C-c g") 'counsel-git)
-    (global-set-key (kbd "C-c j") 'counsel-git-grep)
-    (global-set-key (kbd "C-c k") 'counsel-ag)
-    (global-set-key (kbd "C-x l") 'counsel-locate)
-    (global-set-key (kbd "C-S-o") 'counsel-rhythmbox)
-    (define-key read-expression-map (kbd "C-r") 'counsel-expression-history)
+    ;; (global-set-key (kbd "C-c C-r") 'ivy-resume)
+    ;; (global-set-key (kbd "<f6>") 'ivy-resume)
+    ;; (global-set-key (kbd "M-x") 'counsel-M-x)
+    ;; (global-set-key (kbd "C-x C-f") 'counsel-find-file)
+    ;; (global-set-key (kbd "<f1> f") 'counsel-describe-function)
+    ;; (global-set-key (kbd "<f1> v") 'counsel-describe-variable)
+    ;; (global-set-key (kbd "<f1> l") 'counsel-load-library)
+    ;; (global-set-key (kbd "<f2> i") 'counsel-info-lookup-symbol)
+    ;; (global-set-key (kbd "<f2> u") 'counsel-unicode-char)
+    ;; (global-set-key (kbd "C-c g") 'counsel-git)
+    ;; (global-set-key (kbd "C-c j") 'counsel-git-grep)
+    ;; (global-set-key (kbd "C-c k") 'counsel-ag)
+    ;; (global-set-key (kbd "C-x l") 'counsel-locate)
+    ;; (global-set-key (kbd "C-S-o") 'counsel-rhythmbox)
+    ;; (define-key read-expression-map (kbd "C-r") 'counsel-expression-history)
     ;; make it so that the search wraps
     ;; (setq ivy-wrap t)
     ;; add counsel-yank-pop
-    (global-set-key (kbd "M-y") 'counsel-yank-pop)
+    ;; (global-set-key (kbd "M-y") 'counsel-yank-pop)
     ))
 
 ;; avy
@@ -208,31 +238,24 @@
   :ensure t
   :bind ("M-s" . avy-goto-char))
 
-(use-package auto-complete
-  :ensure t
-  :init
-  (progn
-    (ac-config-default)
-    (global-auto-complete-mode t)
-    ))
+;; (use-package auto-complete
+;;   :ensure t
+;;   :init
+;;   (progn
+;;     (ac-config-default)
+;;     (global-auto-complete-mode t)
+;;     ))
 
 ;;(use-package color-theme
 ;;  :ensure t)
 
-(load-theme 'solarized-light t)
+;; (load-theme 'solarized-light t)
 ;; make the modeline high contrast
-(setq solarized-high-contrast-mode-line t)
+;; (setq solarized-high-contrast-mode-line t)
 ;; make the fringe stand out from the background
-(setq solarized-distinct-fringe-background t)
-;; (load-theme 'monokai)
+;; (setq solarized-distinct-fringe-background t)
+(load-theme 'monokai)
 ;; gonna try out default theme again..
-
-;; get some doom themes
-(use-package doom-themes
-  :ensure t
-  :config
- )
-;; (load-theme 'doom-nord-light)
 
 (use-package undo-tree
 :ensure t
@@ -260,12 +283,12 @@
 ;;   :config
 ;;   (global-hungry-delete-mode))
 
-; expand the marked region in semantic increments (negative prefix to
-; reduce region)
-(use-package expand-region
-:ensure t
-:config
-(global-set-key (kbd "C-=") 'er/expand-region))
+;; ; expand the marked region in semantic increments (negative prefix to
+;; ; reduce region)
+;; (use-package expand-region
+;; :ensure t
+;; :config
+;; (global-set-key (kbd "C-=") 'er/expand-region))
 
 ;; end small packages
 
@@ -310,25 +333,33 @@
 ;; (setq split-height-threshold nil)
 ;; (setq split-width-threshold )
 
-;; ipython support
-(use-package ein
-  :ensure t
-  )
-(setq ein:use-auto-complete t)
+;; ipython support-- comment out for now.
+;; (use-package ein
+;;   :ensure t
+;;   )
+;; (setq ein:use-auto-complete t)
 ;; make ein:notebook-login and ein:notebook-open actual commands?
-(global-set-key (kbd "C-x C-l") 'ein:notebooklist-login)
-(global-set-key (kbd "C-x C-o") 'ein:notebooklist-open)
-(add-hook 'ein:notebook-mode-hook
-	  (lambda ()
-	    (setq indent-tabs-mode nil)))
+;; (global-set-key (kbd "C-x C-l") 'ein:notebooklist-login)
+;; (global-set-key (kbd "C-x C-o") 'ein:notebooklist-open)
+;; (add-hook 'ein:notebook-mode-hook
+;; 	  (lambda ()
+;; 	    (setq indent-tabs-mode nil)))
+
+;; evil leader key
+(use-package evil-leader
+  :ensure t
+  :config
+  (global-evil-leader-mode))
 
 ;; make evil tab character just emulate emacs'
 ;; same with return
 (with-eval-after-load 'evil-maps
   (define-key evil-motion-state-map (kbd "TAB") nil)
   (define-key evil-motion-state-map (kbd "RET") nil)
-  (define-key evil-motion-state-map (kbd "SPC") nil))
-;; install evil!?!?!?!
+  (define-key evil-normal-state-map (kbd "TAB") nil)
+  (define-key evil-normal-state-map (kbd "RET") nil))
+
+;; install evil
 (add-to-list 'load-path "~/.emacs.d/evil")
 (require 'evil)
 (evil-mode 1)
@@ -350,11 +381,12 @@
 ;; linum mode
 ;;(linum-mode)
 ;; (linum-relative-global-mode)
-(setq linum-relative-current-symbol "")
+;; (setq linum-relative-current-symbol "")
 
 ;; add different cursor color support!
-(setq evil-insert-state-cursor '((bar . 2) "gray50")
-      evil-normal-state-cursor '(box "gray50")
+;; was originally gray50 for solarized-light
+(setq evil-insert-state-cursor '((bar . 2) "#AE81FF")
+      evil-normal-state-cursor '(box "#AE81FF")
       evil-emacs-state-cursor  '(box "black")
       evil-visual-state-cursor '(box "orange")
       evil-motion-state-cursor '(box "green")
@@ -362,12 +394,12 @@
 
 ;; function to adjust our global mode for this
 ;; keep linums on for org mode.. after all that
-(define-globalized-minor-mode my-global-linum-mode linum-mode
-  (lambda ()
-    (unless (or (minibufferp)
-                (derived-mode-p 'doc-view-mode 'eshell-mode
-                'org-mode 'pdf-view-mode))
-      (linum-relative-mode 1))))
+;; (define-globalized-minor-mode my-global-linum-mode linum-mode
+;;   (lambda ()
+;;     (unless (or (minibufferp)
+;;                 (derived-mode-p 'doc-view-mode 'eshell-mode
+;;                 'org-mode 'pdf-view-mode))
+;;       (linum-relative-mode 1))))
 ;; (my-global-linum-mode)
 
 
@@ -375,7 +407,7 @@
   (lambda ()
     (unless (or (minibufferp)
                 (derived-mode-p 'doc-view-mode 'eshell-mode
-                'pdf-view-mode)) ;; org-mode
+                'pdf-view-mode 'helm-major-mode)) ;; org-mode
       (display-line-numbers-mode 1))))
 (my-global-display-line-numbers-mode)
 
@@ -383,8 +415,8 @@
 
 ;; try to get ipython shell readline error to work
 (setq python-shell-completion-native-enable nil)
-;; set path in emacs to be the same as terminal!
 
+;; set path in emacs to be the same as terminal!
 (use-package exec-path-from-shell
   :ensure t
   :config
@@ -397,7 +429,7 @@
 (use-package conda
   :ensure t
   :init
-  (setq conda-anaconda-home (expand-file-name "~/anaconda"))
+  (setq conda-anaconda-home (expand-file-name "~/opt/anaconda3"))
   :config
   ;; If you want interactive shell support, include:
   (conda-env-initialize-interactive-shells)
@@ -541,82 +573,101 @@ For more information, see the function `buffer-menu'."
 ;;   )
 
 ;; treemacs
-(use-package treemacs
-    :ensure t
-    :defer t
-    :config
-    (progn
+;; (use-package treemacs
+;;     :ensure t
+;;     :defer t
+;;     :config
+;;     (progn
 
-      (setq treemacs-follow-after-init          t
-            treemacs-width                      35
-            treemacs-indentation                2
-            treemacs-git-integration            t
-            treemacs-collapse-dirs              3
-            treemacs-silent-refresh             nil
-            treemacs-change-root-without-asking nil
-            treemacs-sorting                    'alphabetic-desc
-            treemacs-show-hidden-files          t
-            treemacs-never-persist              nil
-            treemacs-is-never-other-window      nil
-            treemacs-goto-tag-strategy          'refetch-index)
+;;       (setq treemacs-follow-after-init          t
+;;             treemacs-width                      35
+;;             treemacs-indentation                2
+;;             treemacs-git-integration            t
+;;             treemacs-collapse-dirs              3
+;;             treemacs-silent-refresh             nil
+;;             treemacs-change-root-without-asking nil
+;;             treemacs-sorting                    'alphabetic-desc
+;;             treemacs-show-hidden-files          t
+;;             treemacs-never-persist              nil
+;;             treemacs-is-never-other-window      nil
+;;             treemacs-goto-tag-strategy          'refetch-index)
 
-      (treemacs-follow-mode t)
-      (treemacs-filewatch-mode t))
-    :bind
-    (:map global-map
-          ([f8]        . treemacs-toggle)
-          ([f9]        . treemacs-projectile-toggle)
-          ("<C-M-tab>" . treemacs-toggle)
-          ("M-0"       . treemacs-select-window)
-          ("C-c 1"     . treemacs-delete-other-windows)
-        ))
-  (use-package treemacs-projectile
-    :defer t
-    :ensure t
-    :config
-    (setq treemacs-header-function #'treemacs-projectile-create-header))
+;;       (treemacs-follow-mode t)
+;;       (treemacs-filewatch-mode t))
+;;     :bind
+;;     (:map global-map
+;;           ([f8]        . treemacs-toggle)
+;;           ([f9]        . treemacs-projectile-toggle)
+;;           ("<C-M-tab>" . treemacs-toggle)
+;;           ("M-0"       . treemacs-select-window)
+;;           ("C-c 1"     . treemacs-delete-other-windows)
+;;         ))
+;;   (use-package treemacs-projectile
+;;     :defer t
+;;     :ensure t
+;;     :config
+;;     (setq treemacs-header-function #'treemacs-projectile-create-header))
 
-;; use treemacs-evil
-(use-package treemacs-evil
-  :ensure t
- )
+;; ;; use treemacs-evil
+;; (use-package treemacs-evil
+;;   :ensure t
+;;  )
 
 ;; dumb-jump
 (use-package dumb-jump
   :bind (("M-g o" . dumb-jump-go-other-window)
-	 ("M-g j" . dumb-jump-go)
+	 ("M-j" . dumb-jump-go)
+	 ("M-l" . dumb-jump-quick-look)
 	 ("M-g x" . dumb-jump-go-prefer-external)
 	 ("M-g z" . dumb-jump-go-prefer-external-other-window)
-	 ("M-g b" . dumb-jump-back))
-   :config (setq dumb-jump-selector 'ivy) ;; (setq dumb-jump-selector 'helm)
-  :ensure
-
-  :config
-;; (setq dumb-jump-selector 'ivy) ;; (setq dumb-jump-selector 'helm)
-:init
-(dumb-jump-mode)
-  :ensure
-)
+	 ("M-b" . dumb-jump-back))
+  ;; (setq dumb-jump-selector 'ivy)
+  :config (setq dumb-jump-selector 'helm)
+  ;; make dumb jump with with evil and xref-activate!
+  (setq xref-backend-functions (remq 'etags--xref-backend xref-backend-functions))
+  (add-to-list 'xref-backend-functions #'dumb-jump-xref-activate t)
+  :init (dumb-jump-mode)
+  (eval-when-compile
+    (require 'helm-source nil t))
+  :ensure t)
 
 ;; make fci mode global except for dired and org
+;; can probably make this display fci insteaad!
 (define-globalized-minor-mode global-fci-mode fci-mode
     (lambda ()
       (if (and
            (not (string-match "^\*.*\*$" (buffer-name)))
            (not (eq major-mode 'dired-mode))
-	   (not (derived-mode-p 'doc-view-mode 'org-mode 'eshell-mode)))
+	   (not (derived-mode-p 'doc-view-mode 'eshell-mode)))
           ;; gonna try commenting out
           ;; (not (eq major-mode 'org-mode))
           (fci-mode 1))))
 
+;; this one didn't work...
+(define-globalized-minor-mode global-display-fci-mode display-fill-column-indicator-mode
+    (lambda ()
+      (if (and
+           (not (string-match "^\*.*\*$" (buffer-name)))
+           (not (eq major-mode 'dired-mode))
+	   (not (derived-mode-p 'doc-view-mode 'eshell-mode)))
+          ;; gonna try commenting out
+          ;; (not (eq major-mode 'org-mode))
+          (display-fill-column-indicator-mode 1))))
+
+(global-fci-mode 1)
+
+
+
 ;; use fill-column indicator instead of whitespace
-(use-package fill-column-indicator
-  :ensure t
-  :config
-  (global-fci-mode 1)
-  )
+;; (use-package fill-column-indicator
+;;   :ensure t
+;;   :config
+;;   (global-fci-mode 1)
+;;   )
+
 ;; set default fill column
-(setq default-fill-column 79)
+;; (setq default-fill-column 79)
+(setq-default fill-column 79)
 
 ;; add some initial height and width params
 (add-to-list 'default-frame-alist '(width . 85))
@@ -738,10 +789,15 @@ For more information, see the function `buffer-menu'."
 ;; (load-theme 'solarized-light t)
 
 ;; or for treemacs users
-(doom-themes-treemacs-config)
+;; (doom-themes-treemacs-config)
 
 ;; Corrects (and improves) org-mode's native fontification.
-(doom-themes-org-config)
+(use-package doom-themes
+  :ensure t
+  :config
+  ;; Enable flashing mode-line on errors
+  (doom-themes-visual-bell-config)
+  (doom-themes-org-config))
 
 ;; disable emacs lisp flycheck
 (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc))
@@ -826,12 +882,12 @@ For more information, see the function `buffer-menu'."
         "pdflatex -shell-escape -interaction nonstopmode -output-directory %o %f"))
 
 (setq org-latex-minted-options
-           '(("frame" "single")
+           '(("frame" "lines")
              ("fontsize" "auto")
              ))
 
 (setq org-latex-verbatim-options
-           '(("frame" "single")
+           '(("frame" "lines")
              ("fontsize" "auto")
              ))
 
@@ -846,7 +902,7 @@ For more information, see the function `buffer-menu'."
 ;; highlight latex stuff in org
 (setq org-highlight-latex-and-related '(latex))
 
-;; make arrow keys work with shell                                                                              
+;; make arrow keys work with shell
 
 (eval-after-load "shell"
   '(define-key shell-mode-map (kbd "<up>") 'comint-previous-input))
@@ -889,6 +945,9 @@ For more information, see the function `buffer-menu'."
 ;; change ispell location to work.
 (setq ispell-program-name "/usr/local/bin/aspell")
 
+;; add ispell to tex-mode too
+(add-hook 'tex-mode-hook 'turn-on-flyspell)
+
 ;; display relative line numbers
 ;; (global-display-line-numbers-mode)
 (setq display-line-numbers-type 'relative)
@@ -925,16 +984,19 @@ For more information, see the function `buffer-menu'."
 
 (add-hook 'pdf-view-mode-hook 'auto-revert-mode)
 
-(add-hook 'python-mode-hook
-          (lambda () (interactive)
-            (setq python-fill-docstring-style 'pep-257-nn)
-            (set-fill-column 79)
-            ))
+;; (add-hook 'python-mode-hook
+;;           (lambda () (interactive)
+;;             ;; (setq python-fill-docstring-style 'pep-257-nn)
+;;             (set-fill-column 79)
+;;             ))
+
+
+(add-hook 'python-mode-hook 'highlight-numbers-mode)
 
 ;; org default args for python
 (setq org-babel-default-header-args:jupyter-python '((:async . "yes")
 						     (:session . "py")
-						     (:display . "plain")
+						     (:display . "all")
 						     (:results . "scalar")
 						     (:exports . "both")))
 
@@ -945,6 +1007,19 @@ For more information, see the function `buffer-menu'."
 							       (:session . "wo")
 							       (:display . "plain")
 							       ))
+
+(setq org-babel-default-header-args:jupyter-julia '((:async . "yes")
+						    (:exports . "both")
+						    (:results . "scalar")
+						    (:session . "jl")
+						    (:display . "all")
+						    (:display
+						    . "text/org
+						    image/svg
+						    image/jpeg
+						    image/png
+						    text/plain")
+						    ))
 
 ;; try getting wolfram typesetting!
 (use-package wolfram-mode
@@ -998,22 +1073,23 @@ For more information, see the function `buffer-menu'."
   ;; 		      :inverse-video nil
   ;; 		      :box nil)
 
-  (setq ns-use-srgb-colorspace nil)
+  ;;commented all these out...
+  ;; (setq ns-use-srgb-colorspace nil)
 
-  (set-face-attribute 'powerline-active2 nil :foreground "gray50" :bold t)
-  (set-face-attribute 'powerline-active2 nil :background "gray90")
+  ;; (set-face-attribute 'powerline-active2 nil :foreground "gray50" :bold t)
+  ;; (set-face-attribute 'powerline-active2 nil :background "gray90")
 
-  (set-face-attribute 'powerline-active1 nil :foreground "gray30" :bold t)
-  (set-face-attribute 'powerline-active1 nil :background "gray70")
+  ;; (set-face-attribute 'powerline-active1 nil :foreground "gray30" :bold t)
+  ;; (set-face-attribute 'powerline-active1 nil :background "gray70")
 
-  (set-face-attribute 'powerline-active0 nil :foreground "white")
-  (set-face-attribute 'powerline-active0 nil :background "gray30")
+  ;; (set-face-attribute 'powerline-active0 nil :foreground "white")
+  ;; (set-face-attribute 'powerline-active0 nil :background "gray30")
 
-  (set-face-attribute 'mode-line nil
-		      :foreground "white"
-		      :background "gray40"
-		      :bold t)
-  (setq powerline-height 20)
+  ;; (set-face-attribute 'mode-line nil
+  ;; 		      :foreground "white"
+  ;; 		      :background "gray40"
+  ;; 		      :bold t)
+  (setq powerline-height 18)
 
   )
 
@@ -1039,22 +1115,29 @@ For more information, see the function `buffer-menu'."
   (delight 'flyspell-mode nil t)
   (delight 'flymake-mode nil t)
   (delight 'elpy-mode nil t)
+  (delight 'helm-mode nil t)
+  (delight 'evil-googles-mode nil t)
   )
-(require 'delight-powerline)
+;; check if we need this.
+;(require 'delight-powerline)
 
 ;; change org block backgrounds
-(set-face-attribute 'org-block-begin-line nil :background "ivory2")
-(set-face-attribute 'org-block-end-line nil :background "ivory2")
+;; (set-face-attribute 'org-block-begin-line nil :background "ivory2")
+;; (set-face-attribute 'org-block-end-line nil :background "ivory2")
 
 ;; make evil normal state easier on the eyes
-(set-face-attribute 'powerline-evil-normal-face nil :background "lime green")
+;;(set-face-attribute 'powerline-evil-normal-face nil :background "lime green")
+;; change to monokai color
+(set-face-attribute 'powerline-evil-normal-face nil :background "#A6E22E")
 
 (add-to-list 'org-src-lang-modes '("jupyter-wolfram-language" . "wolfram"))
+(add-to-list 'org-src-lang-modes '("jupyter-julia" . "julia"))
 
 ;; load jupyter keyboard macro convert
 (load-file "~/.emacs.d/macros/jupyter_org_babel_convert.macro")
 (add-hook 'org-mode-hook (lambda () 
     (local-set-key (kbd "C-c C-g") 'convert-jupyter-babel)
+    (local-set-key (kbd "C-c C-s") 'org-babel-jupyter-scratch-buffer)
     ))
 
 
@@ -1073,3 +1156,169 @@ For more information, see the function `buffer-menu'."
 
 (use-package ag
   :ensure t)
+
+(use-package evil-goggles
+  :ensure t
+  :config
+  (evil-goggles-mode 1))
+
+;; python print command
+(defun python-debug ()
+  (setq yanked (car kill-ring))
+  (interactive)
+  (end-of-line)
+  (newline-and-indent)
+  (insert "print('")
+  (insert yanked)
+  (insert ": %s' % ")
+  (insert yanked)
+  (insert ")")
+  (backward-char 2))
+
+(evil-leader/set-leader "<SPC>")
+(evil-leader/set-key "p" 'python-debug)
+
+;; use speedbar- in the current frame
+(use-package sr-speedbar
+  :ensure t
+  :config
+  (global-set-key (kbd "s-s") 'sr-speedbar-toggle))
+  ;;(sr-speedbar-open)) ;; -- don't open for now..
+
+;; focus out hooks with modeline testing- it works!!!
+(add-hook 'focus-out-hook
+      (lambda ()
+        (copy-face 'mode-line '--mode-line-backup)
+        (copy-face 'mode-line-inactive 'mode-line)))
+(add-hook 'focus-in-hook
+      (lambda ()
+        (copy-face '--mode-line-backup 'mode-line)))
+
+(require 'color)
+(set-face-attribute 'org-block nil :background
+                    (color-darken-name
+                     (face-attribute 'default :background) 3))
+
+;; syntax highlight numbers!
+(use-package highlight-numbers
+  :ensure t
+  :config
+  (add-hook 'prog-mode-hook 'highlight-numbers-mode))
+
+;; change symbols i.e. underscores to be part of words!
+;; don't do this, I like underscores to be separate I think
+;; (with-eval-after-load 'evil
+;;     (defalias #'forward-evil-word #'forward-evil-symbol)
+;;     ;; make evil-search-word look for symbol rather than word boundaries
+;;     (setq-default evil-symbol-word-search t))
+
+;; yaml mode
+(require 'yaml-mode)
+    (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
+
+(use-package latex
+  :ensure auctex)
+
+(use-package evil-tex
+  :ensure t
+  :config
+  (add-hook 'LaTeX-mode-hook #'evil-tex-mode))
+
+;; make commenting line not move to the beginning of the org source block
+(defun comment-line-leave-point (n)
+  (interactive "p")
+  (save-excursion
+    (comment-line n)))
+
+;; don't include .pngs in recent files, they blow up the size.
+;; (add-to-list 'recentf-exclude "\\.png\\'")
+
+(use-package julia-mode
+  :ensure t
+  :config
+  (add-hook 'julia-mode-hook 'flycheck-mode))
+
+(with-eval-after-load "recentf"
+  (setq recentf-max-menu-items 50)
+  (add-to-list 'recentf-exclude "\\.png\\"))
+(recentf-mode 1)
+
+;; display help over other windows to easily close!
+(setq help-window-select t)
+
+(use-package quelpa
+  :ensure t)
+
+(quelpa
+ '(quelpa-use-package
+   :fetcher git
+   :url "https://github.com/quelpa/quelpa-use-package.git"))
+(require 'quelpa-use-package)
+
+;; linter for julia!
+;; (use-package julia-staticlint
+;;   ;; https://github.com/dmalyuta/julia-staticlint
+;;   ;; Emacs Flycheck support for StaticLint.jl
+;;   :ensure nil
+;;   :quelpa ((julia-staticlint :fetcher github
+;; 			       :repo "dmalyuta/julia-staticlint"
+;; 			       :files (:defaults "julia_staticlint_server.jl"
+;; 						 "julia_staticlint_client.jl")))
+;;   :hook ((julia-mode . julia-staticlint-activate))
+;;   :config
+;;   (julia-staticlint-init))
+
+(use-package julia-staticlint
+  ;; https://github.com/dmalyuta/julia-staticlint
+  ;; Emacs Flycheck support for StaticLint.jl
+  :ensure nil
+  :quelpa ((julia-staticlint :fetcher github
+			       :repo "tdalford1/julia-staticlint"
+			       :files (:defaults "julia_staticlint_server.jl"
+						 "julia_staticlint_client.jl")))
+  :load-path "~/.emacs.d/patches/julia-staticlint"
+  :hook ((julia-mode . julia-staticlint-activate))
+  :config
+  (julia-staticlint-init))
+
+(use-package project :ensure t)
+
+;; eglot--- wait for the package update to be able to fully use this!
+(use-package eglot-jl
+  :ensure t
+  :config );;(eglot-jl-init))
+
+;; make evil o and O work in org mode!!!!!
+;; I don't think this is the best idea...
+(evil-define-minor-mode-key 'normal 'org-evil-list-mode
+  "O" 'org-evil-list-open-item-or-insert-above
+  "o" 'org-evil-list-open-item-or-insert-below)
+
+;; company mode stuff!
+(use-package company
+  :ensure t
+  :bind (:map company-active-map ("<tab>" . company-complete-selection))
+  :defer 2
+  :diminish
+  :custom
+  (company-begin-commands '(self-insert-command))
+  (company-idle-delay .1)
+  (company-minimum-prefix-length 2)
+  (company-show-numbers t)
+  (company-tooltip-align-annotations 't)
+  (add-to-list 'company-backends 'company-capf)
+  (define-key company-active-map (kbd "C-n") 'company-select-next-or-abort)
+  (define-key company-active-map (kbd "C-p") 'company-select-previous-or-abort)
+  (global-company-mode t))
+
+(use-package multi-line
+  :ensure t
+  :config
+  (global-set-key (kbd "M-c") 'multi-line)
+  ;; make this an easier keybinding in prog-modes
+  (define-key prog-mode-map (kbd "M-c") 'multi-line))
+
+(defun comment-line-leave-point (n)
+  (interactive "p")
+  (save-excursion
+    (comment-line n)))
